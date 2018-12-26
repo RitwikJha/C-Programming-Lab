@@ -1,0 +1,27 @@
+/*This program searches for an integer in an one dimensional array of integers. This search is linear.
+The maximum elements in the array can be only 1000. Arrays require static memory allocation.*/
+#include<stdio.h>
+int main(){
+    int arr[1000],i,num,flag=0,search;
+    printf("Enter the number of elements to be inserted in the array: ");
+    scanf("%d",&num);  /*Gets input from user*/
+    for(i=0;i<num;i++){
+        printf("Enter number %d: ",i+1);  /*This for loop fills the array with "num" number of elements*/
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the number to be searched: ");
+    scanf("%d",&search);  /*The number to be searched is inputted by the user*/
+    for(i=0;i<num;i++){
+        if(search==arr[i]){   /*This for loop searches for the requested number in the array*/
+            flag = 1;
+            break;
+        }
+    }
+    if(flag==1){
+        printf("The element is present at location %d",i+1);
+    }
+    else{
+        printf("The element is not present in this array.");
+    }
+    return 0;
+}
