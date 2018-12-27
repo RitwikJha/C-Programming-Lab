@@ -1,1 +1,42 @@
+/*This program searches for an integer in an array of integers. The array must be sorted is a
+pre-condition for applying the binary search method. In this case sorting should be in ascending order.
+The maximum number of elements that can be entered in the
+array is 1000. Arrays require static memory allocation.*/
+
+/*PROGRAM GOES HERE...*/
+
+#include<stdio.h>
+int main(){
+    int low=0,num,search,i,high,mid,arr[1000],flag=0;
+    printf("Enter the number of elements to insert in the array: ");
+    scanf("%d",&num);
+    high = num-1;
+    for(i=0;i<num;i++){
+        printf("Enter number %d: ",i+1);  /*The integers are inserted in the array in ascending order*/
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the integer to be searched: ");
+    scanf("%d",&search);
+    while(low<=high){
+        mid = (low+high)/2;
+        if(arr[mid]>search){
+            high = mid-1;
+        }
+        else if(arr[mid]==search){
+            flag=1;
+            break;
+        }
+        else{
+             low = mid+1;
+        }
+    }
+    if(flag==1){
+        printf("Integer is present at location %d",mid+1);
+    }
+    else{
+        printf("This integer is not present in the array.");
+    }
+return 0;
+}
+
 
