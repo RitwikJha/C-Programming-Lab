@@ -1,7 +1,7 @@
 /*This program searches for an integer in an one dimensional array of integers. This search is linear.
 The maximum number of elements in this array can be only 1000. Arrays require static memory allocation.*/
 
-PROGRAM GOES HERE...
+/*PROGRAM GOES HERE...*/
 
 #include<stdio.h>
 int main(){
