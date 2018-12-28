@@ -1,0 +1,17 @@
+/*This program reverses a string.*/
+
+/*PROGRAM GOES HERE...*/
+
+#include<stdio.h>
+void main(){
+    int i=0,j;
+    char word[100];   /*An array of characters is a string*/
+    printf("Enter a string: ");
+    scanf("%[^\n]",word);    /*A string is inputted by the user*/
+    while(word[i]!='\0'){    /*This while loop counts the length of the string*/
+        i++;
+    }
+    for(j=i-1;j>=0;j--){
+        printf("%c",word[j]);   /*This for loop prints the reversed string*/
+    }
+}
