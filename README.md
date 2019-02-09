@@ -7,3 +7,4 @@ PRACTICALS
 3. Largest of three numbers.
 4. Reversing a String.
 5. Largest and Second largest numbers. 
+6. Newton-Raphson Method.
